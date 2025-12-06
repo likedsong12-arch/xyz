@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +11,28 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000000 0%, #a0a0a0 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
-        
+
         .form-container {
             background: white;
             border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             padding: 40px;
             width: 100%;
             max-width: 500px;
             position: relative;
             overflow: hidden;
         }
-        
+
         .form-container::before {
             content: '';
             position: absolute;
@@ -41,12 +42,12 @@
             height: 5px;
             background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
         }
-        
+
         .school-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .school-logo {
             width: 80px;
             height: 80px;
@@ -59,14 +60,14 @@
             border: 3px solid #667eea;
             background: white;
         }
-        
+
         .school-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
         }
-        
+
         h1 {
             color: #333;
             font-size: 20px;
@@ -74,24 +75,24 @@
             line-height: 1.3;
             font-weight: bold;
         }
-        
+
         .school-acronym {
             color: #667eea;
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 5px;
         }
-        
+
         .subtitle {
             color: #666;
             font-size: 16px;
             margin-bottom: 20px;
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -99,7 +100,7 @@
             font-weight: 600;
             font-size: 14px;
         }
-        
+
         input[type="email"] {
             width: 100%;
             padding: 15px;
@@ -109,14 +110,14 @@
             transition: all 0.3s ease;
             background: #f8f9fa;
         }
-        
+
         input[type="email"]:focus {
             outline: none;
             border-color: #667eea;
             background: white;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
-        
+
         .submit-btn {
             width: 100%;
             padding: 15px;
@@ -135,7 +136,7 @@
             overflow: hidden;
             animation: buttonGradient 3s ease infinite;
         }
-        
+
         .submit-btn::before {
             content: '';
             position: absolute;
@@ -146,31 +147,34 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s;
         }
-        
+
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 
+            box-shadow:
                 0 15px 35px rgba(102, 126, 234, 0.4),
                 0 5px 15px rgba(240, 147, 251, 0.2);
         }
-        
+
         .submit-btn:hover::before {
             left: 100%;
         }
-        
+
         .submit-btn:active {
             transform: translateY(-1px);
         }
-        
+
         @keyframes buttonGradient {
-            0%, 100% {
+
+            0%,
+            100% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
         }
-        
+
         .prank-banner {
             position: fixed;
             top: 0;
@@ -184,31 +188,31 @@
             z-index: 1000;
             animation: slideDown 0.5s ease-out;
         }
-        
+
         .prank-content {
             text-align: center;
             color: white;
             padding: 40px;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             animation: bounce 0.6s ease-out;
         }
-        
+
         .prank-title {
             font-size: 4em;
             font-weight: bold;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .prank-message {
             font-size: 1.5em;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
-        
+
         .close-btn {
             padding: 15px 30px;
             background: white;
@@ -220,37 +224,45 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .close-btn:hover {
             background: #f1f1f1;
             transform: scale(1.05);
         }
-        
+
         @keyframes slideDown {
             from {
                 transform: translateY(-100%);
             }
+
             to {
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0);
             }
+
             40% {
                 transform: translateY(-20px);
             }
+
             60% {
                 transform: translateY(-10px);
             }
         }
-        
+
         .required {
             color: #ff6b6b;
         }
-        
+
         .info-text {
             font-size: 14px;
             color: #666;
@@ -260,28 +272,30 @@
         }
     </style>
 </head>
+
 <body>
     <div class="form-container">
         <div class="school-header">
             <div class="school-logo">
-                <img src="https://scontent.fcgp7-1.fna.fbcdn.net/v/t39.30808-1/465609910_1039113178234400_6574594893766783494_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=9ENLSNfi9K8Q7kNvwEVYD4C&_nc_oc=AdlaaRQ3gZATSMEXDZGoz7hIs5aBjg5CQVpvrLNE7yoJtXZ6Z5u61peMY3Y8OYdf6dE&_nc_zt=24&_nc_ht=scontent.fcgp7-1.fna&_nc_gid=s4QxRXrOXNealErgjTOXWQ&oh=00_AfYmQimMupgFLTyCIX4HtGK-OGlOQBXvER2QylCHOS3c5g&oe=68BDFBC8" alt="SLTCPSC RAMU Logo">
+                <img src="https://scontent.fcgp7-1.fna.fbcdn.net/v/t39.30808-1/465609910_1039113178234400_6574594893766783494_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=9ENLSNfi9K8Q7kNvwEVYD4C&_nc_oc=AdlaaRQ3gZATSMEXDZGoz7hIs5aBjg5CQVpvrLNE7yoJtXZ6Z5u61peMY3Y8OYdf6dE&_nc_zt=24&_nc_ht=scontent.fcgp7-1.fna&_nc_gid=s4QxRXrOXNealErgjTOXWQ&oh=00_AfYmQimMupgFLTyCIX4HtGK-OGlOQBXvER2QylCHOS3c5g&oe=68BDFBC8"
+                    alt="SLTCPSC RAMU Logo">
             </div>
             <h1>Shaheed Lieutenant Tanzim Cantonment<br>Public School and College</h1>
             <p class="school-acronym">SLTCPSC RAMU</p>
             <p class="subtitle">Student Registration Portal</p>
         </div>
-        
+
         <form id="registrationForm">
             <div class="form-group">
                 <label for="email">Student Email Address <span class="required">*</span></label>
                 <input type="email" id="email" name="email" required placeholder="Enter your school email address">
             </div>
-            
+
             <button type="submit" class="submit-btn">Complete Registration</button>
         </form>
-        
+
         <p class="info-text">
-            Please use your official school ID for registration. 
+            Please use your official school ID for registration.
             You will receive confirmation and further instructions via your registered contact.
         </p>
     </div>
@@ -292,7 +306,7 @@
             <div class="prank-message">
                 Ha ha motki . toi ekta gadi 🤣<br>
                 toi beshi boddiman 🤣💀<br>
-                Hope you had a good laugh! 
+                Hope you had a good laugh!
             </div>
             <button class="close-btn" onclick="closePrank()">Got me good! 😂</button>
         </div>
@@ -300,37 +314,37 @@
 
     <script>
         let userEmail = '';
-        
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             userEmail = document.getElementById('email').value;
             console.log('Email entered:', userEmail); // Debug log
-            
+
             if (userEmail && userEmail.trim() !== '') {
                 showPrank();
             } else {
                 alert('Please enter a valid email address');
             }
         });
-        
+
         // Alternative trigger - also listen for button click
-        document.querySelector('.submit-btn').addEventListener('click', function(e) {
+        document.querySelector('.submit-btn').addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             userEmail = document.getElementById('email').value;
-            
+
             if (userEmail && userEmail.trim() !== '') {
                 showPrank();
             } else {
                 alert('Please enter a valid email address');
             }
         });
-        
+
         function showPrank() {
             const prankBanner = document.getElementById('prankBanner');
             prankBanner.style.display = 'flex';
-            
+
             // Add some extra fun effects
             setTimeout(() => {
                 const prankContent = document.querySelector('.prank-content');
@@ -340,24 +354,24 @@
                 }, 200);
             }, 300);
         }
-        
+
         function closePrank() {
             const prankBanner = document.getElementById('prankBanner');
             prankBanner.style.animation = 'slideDown 0.5s ease-out reverse';
-            
+
             setTimeout(() => {
                 prankBanner.style.display = 'none';
                 prankBanner.style.animation = 'slideDown 0.5s ease-out';
-                
+
                 // Reset form for another prank
                 document.getElementById('registrationForm').reset();
             }, 500);
         }
-        
+
         // Add some hover effects to make it more convincing
         const emailInput = document.getElementById('email');
         if (emailInput) {
-            emailInput.addEventListener('input', function() {
+            emailInput.addEventListener('input', function () {
                 if (this.value && this.value.includes('@')) {
                     this.style.borderColor = '#4ecdc4';
                 } else {
@@ -367,4 +381,5 @@
         }
     </script>
 </body>
+
 </html>
